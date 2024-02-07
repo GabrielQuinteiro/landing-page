@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <script src="index.js"></script>
     <header class="nav-bar">
         <div class="container-logo">
             <a href="https://www.t2s.com.br/home">
@@ -98,24 +99,29 @@
                     </h2>
                 </div>
 
-                <form class="form-lead" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdaWtpKV4R1VxAAuh18Bhki_bjHOKWkbhmQI8_7wE401qV_wg/formResponse">
+                <form class="form-lead"
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdaWtpKV4R1VxAAuh18Bhki_bjHOKWkbhmQI8_7wE401qV_wg/formResponse">
                     <ul class="form-lead__grid">
                         <li><input type="text" name="entry.486803647" id="" placeholder="Empresa" required></li>
                         <li><input type="text" name="entry.13888959" id="" placeholder="Nome" required></li>
                         <li><input type="email" name="entry.981831108" id="" placeholder="Email" required></li>
                         <li><input type="text" name="entry.1389863992" id="" placeholder="Telefone" required></li>
                     </ul>
-                    <div class="form-lead__textarea">    
-                        <textarea name="entry.473939238" id="" cols="30" rows="10" placeholder="Proposta" required></textarea>
+                    <div class="form-lead__textarea">
+                        <textarea name="entry.473939238" id="" cols="30" rows="10" placeholder="Proposta"
+                            required></textarea>
                     </div>
                     <div class="form-lead__btn-area">
                         <input type="submit" name="" id="" value="Enviar >">
-                    </div> 
+                    </div>
+
+                    <div id="mensagem-agradecimento" style="display: none">
+                        <h2 class="destaque">Obrigado pelo seu envio!</h2>
+                        <p>Seu formulário foi enviado com sucesso. Entraremos em contato em breve.</p>
+                    </div>
                 </form>
             </section>
         </div>
-
     </main>
 </body>
-
 </html>

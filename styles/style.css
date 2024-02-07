@@ -25,6 +25,7 @@ body {
     margin: 0;
     font-size: 16px;
     background-color: #3f3f3f;
+    /* overflow: hidden; */
 }
 
 header {
@@ -212,4 +213,21 @@ input {
     border: none;
     font-size: 1em;
     width: 75%;
+}
+
+#mensagem-agradecimento {
+    display: none;
+    position: fixed;
+    opacity: 0; 
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave de 0.5 segundos */
+    top: 50%; /* Ajusta a posição verticalmente */
+    left: 50%; /* Ajusta a posição horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza o card */
+    padding: 20px;
+    background-color: var(--cor-preto);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    border-radius: 8px;
+    z-index: 9999; /* Certifica-se de que o card esteja sobreposto a outros elementos */
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave de opacidade */
+    border: 2px solid var(--cor-cinza);
 }
