@@ -1,0 +1,44 @@
+@media screen and (max-width: 760px){
+
+    header nav ul {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2.375em;
+        line-height: 32px;
+    }
+
+    article img {
+        display: none;
+    }
+
+    #lead-title-2 {
+        display: none;
+    }
+
+    .form-lead__grid {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-left: 0;
+        width: 134%;
+        margin: 0 auto;
+    }
+
+    .form-lead__grid li {
+        align-self: center;
+        width: 100%;
+    }
+
+
+
+    .form-lead__btn-area {
+        display: flex;
+        justify-content: center;
+    }
+
+    form [type="submit"] {
+        width: 50%;
+    }
+}
