@@ -64,3 +64,11 @@
         width: 15%;
     }
 }
+
+@media screen and (max-width: 380px) {
+    .card-titulo-servico__titulo,
+    .card-titulo-servico__sub-titulo {
+        font-size: 2em;
+        line-height: 30px;
+    }
+}
