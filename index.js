@@ -1,7 +1,6 @@
-
 document.addEventListener("DOMContentLoaded",
     function () {
-        const form = document.querySelector(".form-lead");
+        const form = document.querySelector(".form-container__form");
         const mensagemAgradecimento = document.getElementById("mensagem-agradecimento");
         form.addEventListener("submit", function (event) {
             event.preventDefault();

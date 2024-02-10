@@ -1,10 +1,7 @@
-/* #3264ff AZUL
-#3f3f3f CINZA 
-Rubik
-#000000 OU #1c1c1c PRETO
-#00b4e8 OU #0c9dc7 AZUL */
-
 :root {
+    font-family: 'Rubik';
+    font-size: 16px;
+    background-color: #242424;
     --cor-azul-turquesa: #00b4e8;
     --cor-azul-vibrante: #3264ff;
     --cor-azul-turquesa-escuro: #0c9dc7;
@@ -19,13 +16,10 @@ Rubik
     box-sizing: border-box;
 }
 
-body {
-    color: white;
+input,
+textarea,
+form [type="submit"] {
     font-family: 'Rubik';
-    margin: 0;
-    font-size: 16px;
-    background-color: #3f3f3f;
-    /* overflow: hidden; */
 }
 
 header {
@@ -35,161 +29,205 @@ header {
     right: 0;
 }
 
-main {
-    margin-top: 100px;
-}
-
-aside p {
-    margin-top: 20px;
-}
-
-aside h2 {
-    margin-top: 20px
-}
-
-section {
-    margin-top: 0;
-}
-
-.nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+/* Header */
+.intro {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: auto 1fr auto;
     background-color: var(--cor-preto);
-    align-items: center;
-    max-height: 56px;
+    height: 56px;
 }
 
-.nav-bar__opt {
-    display: inline-block;
-    font-size: 14.0pt;
-    padding: 10px 12px;
+.barra-lateral {
+    padding: 16px 12px;
+    cursor: pointer;
+    height: 55px;
+    width: 48px;
+    left: 0;
+    top: 0;
+}
+
+.svg-bar-icon {
     color: rgba(249, 249, 249, 1);
 }
 
-.container-logo {
-    display: table-cell;
-    padding: 16px;
-}
-
-.nav-bar__links, .lupa {
-    color: white;
-    text-decoration: none;
-}
-
-.nav-bar__links:hover {
+.svg-bar-icon:hover {
     color: rgba(249, 249, 249, 0.8199999928);
 }
 
-.lupa {
-    color: white;
-    height: 24px;
-    width: 24px;
-    box-sizing: border-box;
-    cursor: pointer;
-    text-align: center;
+.logo-container {
+    padding-left: 0;
 }
 
 .logo {
-    display: inline-block;
-    max-height: 56px;
-    max-width: 225px;
-    padding: 8px 4px 8px 12px;
-    vertical-align: middle;
-    border: 0;
+    padding: 8px 4px 8px 0px;
 }
 
-.container__main-section {
-    background-color: var(--cor-cinza);
-}
-
-.main-section,
-.lead-section {
-    margin: 0 auto;
-    max-width: 75%;
-    padding-bottom: 50px;
-}
-
-.main-section {
-    display: flex;
-    flex-direction: row;
-}
-
-h1 {
-    font-size: 3.5em;
-    line-height: 45px;
-    margin-bottom: 0;
-}
-
-.title-parte-1 {
-    margin-bottom: 5px;
-}
-
-.title-parte-2 {
-    margin-top: 5px;
-}
-
-.destaque {
-    color: #00b4e8;
-}
-
-.container__lead-section {
-    background-color: var(--cor-preto);
-}
-
-.lead-title-container {
-    max-width: 50%;
-    margin: 0 auto;
-    padding-top: 3.125em;
-    text-align: center;
-}
-
-.lead-title {
-    line-height: 25px;
-    margin-bottom: 15px;
-    margin-top: 0;
-}
-
-.form-lead {
-    margin-top: 1.875em;
-    width: 100%;
-}
-
-.form-lead__grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    list-style: none;
-    padding-left: 0;
-    width: 107%;
-}
-
-.form-lead__grid li {
-    margin-bottom: 2em
-}
-
-.form-lead__textarea {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-lead__textarea textarea {
-    border-radius: 20px;
-    resize: none;
-    margin-bottom: 1em;
-    padding: 0.625em;
-    font-size: 1em;
-}
-
-.form-lead__btn-area {
+.navbar-container {
     display: flex;
     justify-content: flex-end;
 }
 
-form [type="submit"] {
-    font-family: 'Rubik-Light';
+.navbar ul {    
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 16px 12px;
+    font-size: 14pt;
+    color: rgba(249, 249, 249, 1);
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: rgba(249, 249, 249, 0.8199999928);
+}
+
+.lupa-container {
+    width: 48px;
+    padding: 16px 12px;
+}
+
+.svg-lupa-icon {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    fill: rgba(249, 249, 249, 1);
+}
+
+.svg-lupa-icon:hover {
+    fill: rgba(249, 249, 249, 0.8199999928);
+}
+
+/* SectionBeneficios */
+.section-beneficios {
+    background-color: var(--cor-cinza);
+    padding-top: 3.125em;
+}
+
+.section-beneficios__container,
+.section-form-lead__container {
+    margin: 0 auto;
+    max-width: 75%;
+    padding-top: 3.125em;
+    padding-bottom: 3.125em;
+}
+
+.card-titulo-servico {
+    line-height: 32px;
+}
+
+.card-titulo-servico__titulo,
+.card-titulo-servico__sub-titulo {
+    font-size: 2.375em;
+}
+
+.card-titulo-servico__titulo {
+    color: var(--cor-azul-turquesa);
+}
+
+.card-titulo-servico__sub-titulo {
+    color: white;
+}
+
+.descricao-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.descricao {
+    color: white;
+}
+
+.destaque {
+    color: var(--cor-azul-turquesa);
+}
+
+.beneficios h2 {
+    color: white;
+}
+
+.titulo-beneficio {
+    color: var(--cor-azul-turquesa);
+}
+
+.beneficio {
+    color: white;
+    margin-top: 20px;
+}
+
+/* SectionFormLead */
+.section-form-lead {
+    background-color: var(--cor-preto);
+}
+
+.form-lead__title-container {
+    text-align: center;
+    line-height: 15px;
+}
+
+.form-lead__title-container h1 {
+    color: var(--cor-azul-turquesa);
+    font-size: 2.375em;
+    margin-bottom: 0.5em;
+}
+
+.form-lead__title-container h2 {
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.form-container__form ul {
+    list-style: none;
+}
+
+.form-container__form ul li {
+    margin: 10px auto;
+}
+
+.form-container__form ul li input {
     height: 50px;
-    width: 15%;
+    padding: 0.9375em;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    width: 100%;
+}
+
+.form-container__textarea {
+    width: 100%;
+    display: flex;
+}
+
+.form-container__textarea textarea {
+    border-radius: 20px;
+    border: none;
+    resize: none;
+    margin-bottom: 1em;
+    padding: 0.825em;
+    font-size: 1em;
+    height: 100px;
+    width: 100%;
+}
+
+form [type="submit"] {
+    border-radius: 20px;
+    border: none;
+    height: 50px;
+    width: 100%;
     background-color: var(--cor-azul-turquesa);
     color: white;
     text-transform: uppercase;
@@ -206,28 +244,19 @@ form [type="submit"]:hover {
     background-color: #3264ff;
 }
 
-input {
-    height: 50px;
-    padding: 0.9375em;
-    border-radius: 20px;
-    border: none;
-    font-size: 1em;
-    width: 75%;
-}
-
 #mensagem-agradecimento {
+    color: white;
     display: none;
     position: fixed;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.5s ease; /* Adiciona uma transição suave de 0.5 segundos */
     top: 50%; /* Ajusta a posição verticalmente */
     left: 50%; /* Ajusta a posição horizontalmente */
     transform: translate(-50%, -50%); /* Centraliza o card */
     padding: 20px;
     background-color: var(--cor-preto);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 9999; /* Certifica-se de que o card esteja sobreposto a outros elementos */
-    transition: opacity 0.5s ease; /* Adiciona uma transição suave de opacidade */
     border: 2px solid var(--cor-cinza);
 }
